@@ -22,11 +22,10 @@ public class Office365LikePasswordGenerator {
                                        't', 'v', 'w', 'x', 'z'};
     private StringBuilder password;
     
-    public static void main(String[] args) {
-        Office365LikePasswordGenerator generator = new Office365LikePasswordGenerator();
-        System.out.println(generator.generatePassword());
-    }
-    
+    /**
+     * Generates password in Office 365 like format
+     * @return password as String
+     */
     public String generatePassword() {
         password = new StringBuilder();
         password.append(Character.toUpperCase(CONSONANTS[new Random().nextInt(VOWELS.length)]));
