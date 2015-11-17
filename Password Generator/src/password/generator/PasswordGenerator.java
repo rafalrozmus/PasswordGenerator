@@ -18,8 +18,14 @@ import javafx.stage.Stage;
  */
 public class PasswordGenerator extends Application {
     
+    // declare 'stage' as static for the purpose of disabling window resizing
+    public static Stage stage;
+    
     @Override
     public void start(Stage stage) throws Exception {
+        
+        // initialize value of stage
+        this.stage = stage;
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
